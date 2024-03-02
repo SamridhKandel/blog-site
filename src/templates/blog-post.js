@@ -1,15 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-
+import "./blog-post.css"
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout pageTitle={post.frontmatter.title}>
       <div>
-        <h1>{post.frontmatter.title}</h1>
-        <small>{post.frontmatter.date}</small>
-        <div>{post.excerpt}</div>
+        <small className="date">{post.frontmatter.date}</small>
+        <div
+          className="blog-excerpt-wrapper"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        ></div>
       </div>
     </Layout>
   )

@@ -1,0 +1,10 @@
+.blog-excerpt-wrapper > ul,
+.blog-excerpt-wrapper > ul,
+.blog-excerpt-wrapper > ul,
+ul > li > ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+}

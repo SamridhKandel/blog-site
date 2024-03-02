@@ -1,23 +1,23 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import "./blog.css"
 export default function Blog({ data }) {
   const { posts } = data.blog
 
   return (
     <Layout>
-      <div>
-        <h1>My blog posts</h1>
+      <div className="main-wrapper">
+        <h1>Blog posts</h1>
 
         {posts.map(post => (
-          <article key={post.id}>
+          <article className="blog-title" key={post.id}>
             <h2>
               <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
             </h2>
             <small>
               {post.frontmatter.author}, {post.frontmatter.date}
             </small>
-            <p>{post.excerpt}</p>
           </article>
         ))}
       </div>
