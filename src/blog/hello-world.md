@@ -1,6 +1,6 @@
 ---
 title: "Hello, World!"
-date: "2024-02-28"
+date: "02-28-2024"
 id: 1
 author: "Samridh Kandel"
 ---
